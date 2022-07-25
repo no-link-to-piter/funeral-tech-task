@@ -14,13 +14,10 @@ export const formatDate = (value: string) => {
 export const formatDateISOStr = (value: string) => {
     const arr = value.split(".")
     if (arr.length === 3) {
-        if (parseInt(arr[0], 10) > 12) {
-            const day = arr.splice(1, 1);
-            arr.unshift(...day)
-            const transformed = arr.join(".");
-            return new Date(transformed).toISOString();
-        }
-        return new Date(value).toISOString();
+        const day = arr.splice(1, 1);
+        arr.unshift(...day)
+        const transformed = arr.join(".");
+        return new Date(transformed).toISOString();
     }
     return ""
 }
