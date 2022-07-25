@@ -1,1 +1,0 @@
-export { CompanyNameForm as CompanyName } from "./CompanyNameForm";

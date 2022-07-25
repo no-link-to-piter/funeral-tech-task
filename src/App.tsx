@@ -14,6 +14,7 @@ import { ConfirmContext, OverlayContext } from 'context';
 import { AppDispatch } from 'store';
 import { useOnClickOutside } from 'hooks/useOnClickOutside';
 import { deleteCompany } from 'slices/companySlice';
+import { Footer } from 'components/Footer';
 
 const App = () => { 
 
@@ -69,38 +70,41 @@ const App = () => {
               }}/>
           </div>
       </CSSTransition>
-    <BrowserRouter>
-      <Routes>
-        <Route
-          path={routes.login}
-          element={<LoginPage/>}/>
-        <Route
-          path={routes.logout}
-          element={<LogoutPage/>}/>
-        <Route
-          path={routes.home}
-          element={
-            <PrivateRoute>
-              <OverlayContext.Provider value={{isOverlay, setIsOverlay}}>
-                <ConfirmContext.Provider value={{confirmCompanyId, setConfirmCompanyId}}>
-                  <MainPage/>
-                </ConfirmContext.Provider>
-              </OverlayContext.Provider>
-            </PrivateRoute>
-          }/>
-        <Route
-          path={routes.company()}
-          element={
-            <PrivateRoute>
-              <OverlayContext.Provider value={{isOverlay, setIsOverlay}}>
-                <ConfirmContext.Provider value={{confirmCompanyId, setConfirmCompanyId}}>
-                  <CompanyPage/>
-                </ConfirmContext.Provider>
-              </OverlayContext.Provider>
-            </PrivateRoute>
-          }/>
-      </Routes>
-    </BrowserRouter>
+      <div className="app-row">
+        <BrowserRouter>
+          <Routes>
+            <Route
+              path={routes.login}
+              element={<LoginPage/>}/>
+            <Route
+              path={routes.logout}
+              element={<LogoutPage/>}/>
+            <Route
+              path={routes.home}
+              element={
+                <PrivateRoute>
+                  <OverlayContext.Provider value={{isOverlay, setIsOverlay}}>
+                    <ConfirmContext.Provider value={{confirmCompanyId, setConfirmCompanyId}}>
+                      <MainPage/>
+                    </ConfirmContext.Provider>
+                  </OverlayContext.Provider>
+                </PrivateRoute>
+              }/>
+            <Route
+              path={routes.company()}
+              element={
+                <PrivateRoute>
+                  <OverlayContext.Provider value={{isOverlay, setIsOverlay}}>
+                    <ConfirmContext.Provider value={{confirmCompanyId, setConfirmCompanyId}}>
+                      <CompanyPage/>
+                    </ConfirmContext.Provider>
+                  </OverlayContext.Provider>
+                </PrivateRoute>
+              }/>
+          </Routes>
+        </BrowserRouter>
+      </div>
+      <Footer/>
     </div>
   );
 }

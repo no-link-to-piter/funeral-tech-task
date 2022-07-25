@@ -17,7 +17,7 @@ type Props = {
     companyId: string
 }
 
-const CompanyNameForm = ({
+const SingleFieldForm = ({
     companyId
 }: Props) => {
 
@@ -44,7 +44,7 @@ const CompanyNameForm = ({
             onSubmit={handleSubmit}
             enableReinitialize>
                 {() => (
-                    <Form className="single-field-form" id="company-name-form">
+                    <Form className="single-field-form" id="single-field-form">
                         <Field
                             type="text"
                             name="name"
@@ -54,7 +54,7 @@ const CompanyNameForm = ({
                             className={clsx(isEdit || "is_hidden")}/>
                         <button
                             type="submit"
-                            form="company-name-form"
+                            form="single-field-form"
                             className={clsx("single-field-form__button", isEdit || "is_hidden")}>
                                 <EditIcon/>
                         </button>
@@ -71,4 +71,4 @@ const CompanyNameForm = ({
     )
 }
 
-export { CompanyNameForm }
+export { SingleFieldForm }

@@ -13,7 +13,7 @@ import { getCompany, getContact, resetToDefaults } from "slices/companySlice";
 import { RootState } from "slices/rootReducer";
 import { AppDispatch } from "store";
 import { routes } from "routes";
-import { CompanyNameForm } from "components/CompanyNameForm/CompanyNameForm";
+import { SingleFieldForm } from "components/common/SingleFieldForm";
 import { CompanyImages } from "components/CompanyImages";
 import { ConfirmContext, OverlayContext } from "context";
 import { copyText } from "helpers";
@@ -144,7 +144,7 @@ const CompanyContainer = ({
                         company
                         &&
                             <>
-                            <CompanyNameForm
+                            <SingleFieldForm
                                 companyId={companyId}/>
                             <CompanyForm/>
                             {contact && <ContactsForm/> || null}
