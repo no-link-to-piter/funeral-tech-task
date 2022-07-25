@@ -1,0 +1,31 @@
+.form-header
+    display: flex
+    flex-direction: row
+    align-items: center
+    margin-bottom: 8px
+    &__text
+        color: #3B3B3B
+        font-size: 16px
+        line-height: 20px
+        font-weight: 300
+        font-family: 'Noto Sans', sans-serif
+        font-weight: 300
+        margin-right: 16px
+        text-transform: uppercase
+    &__btn
+        height: 20px
+        width: 20px
+        display: flex
+        justify-content: center
+        align-items: center
+        background: none
+        .edit-icon
+            height: 100%
+            width: 100%
+            path
+                fill: #82B284!important
+                transition: all .2s ease-in-out
+        &:hover
+            .edit-icon
+                path
+                    fill: #98C88C!important

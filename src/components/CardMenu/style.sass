@@ -1,0 +1,44 @@
+.card-menu
+    display: flex
+    flex-direction: column
+    width: 224px
+    height: 100vh
+    padding: 20px 0
+    background: #F7F7F7
+    &__title
+        font-family: 'Noto Sans', sans-serif
+        font-weight: 700
+        font-size: 16px
+        line-height: 25px
+        color: #3B3B3B
+        margin-bottom: 2px
+        text-align: center
+        text-transform: uppercase
+    &__subtitle
+        font-family: 'Noto Sans', sans-serif
+        font-weight: 400
+        font-size: 12px
+        line-height: 19px
+        color: #3B3B3B
+        text-align: center
+        text-transform: uppercase
+    &__list
+        margin-top: 20px
+    &__item
+        height: 44px
+        padding: 12px 16px
+        display: flex
+        flex-direction: row
+        align-items: center
+        color: #82B284
+        font-family: 'Noto Sans', sans-serif
+        font-weight: 600
+        background: #F7F7F7
+        transition: .2s ease-in-out
+        font-size: 14px
+        line-height: 20px
+        cursor: pointer
+        svg
+            margin-right: 12px
+        &.is_active
+            background: #EEEEEE

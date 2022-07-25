@@ -1,0 +1,55 @@
+.confirm-popup
+    position: fixed
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    background: #FFFFFF
+    box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.15)
+    padding: 24px
+    display: flex
+    flex-direction: column
+    transition: all .4s ease-in-out
+    opacity: 0
+    z-index: 100
+    &.enter
+        opacity: 0
+    &.enter-done
+        opacity: 1
+    &__title
+        color: #3B3B3B
+        font-size: 20px
+        line-height: 28px
+        font-family: 'Noto Sans', sans-serif
+        font-weight: 400
+        margin-bottom: 4px
+    &__text
+        margin-top: 16px
+        text-align: left
+        color: #3B3B3B
+        font-size: 14px
+        font-family: 'Noto Sans', sans-serif
+        font-weight: 400
+        line-height: 18px
+    &__btns
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: space-between
+        margin-top: 50px
+        width: 100%
+    &__button
+        line-height: 20px
+        font-size: 16px
+        color: #82B284
+        font-weight: 600
+        font-family: 'Noto Sans', sans-serif
+        background: none
+        transition: all .2s ease-in-out
+        text-transform: uppercase
+        &.is_reject
+            color: #B9B9B9
+        &:hover
+            color: #98C88C
+            &.is_reject
+                opacity: .8
+                color: #B9B9B9

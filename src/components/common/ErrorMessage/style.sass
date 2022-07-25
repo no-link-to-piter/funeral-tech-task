@@ -1,0 +1,38 @@
+.error-message
+    display: flex
+    justify-content: center
+    align-items: center
+    background: #FDEEEE
+    padding: 12px 16px
+    width: 296px
+    position: fixed
+    bottom: -100%
+    right: 24px
+    transition: all .4s ease-in-out
+    z-index: 999
+    min-height: 80px
+    border-radius: 2px
+    &.enter
+        bottom: -100%
+    &.enter-done
+        bottom: 32px
+    &__close
+        display: flex
+        justify-content: center
+        align-items: center
+        background: none
+        height: 16px
+        width: 16px
+        position: absolute
+        top: 12px
+        right: 16px
+        .close-icon
+            path
+                fill: #3B3B3B
+    &__text
+        font-size: 14px
+        line-height: 20px
+        font-weight: 600
+        font-family: 'Noto Sans', sans-serif
+        text-align: center
+        color: #3B3B3B

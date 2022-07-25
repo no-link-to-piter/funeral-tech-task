@@ -1,0 +1,40 @@
+.form-field
+    display: flex
+    flex-direction: row
+    align-items: center
+    margin-top: 12px
+    position: relative
+    &__input
+        padding: 10px 12px
+        width: 400px
+        border: 1px solid #CDCDCD
+        border-radius: 2px
+        transition: all .2s ease-in-out
+        &:hover
+            border: 1px solid #808080
+        &:focus
+            border: 1px solid #3B3B3B
+        &.is_error
+            border: 1px solid #D95151
+            color: #D95151
+    &__label
+        font-size: 14px
+        line-height: 20px
+        color: #808080
+        font-family: 'Noto Sans', sans-serif
+        font-weight: 400
+        transition: all .2s ease-in-out
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        left: 12px
+        text-transform: uppercase
+        background: none
+        &.is_input_filled
+            padding: 0 4px
+            top: -6px
+            transform: unset
+            font-size: 10px
+            line-height: 12px
+            left: 8px
+            background: #FFFFFF

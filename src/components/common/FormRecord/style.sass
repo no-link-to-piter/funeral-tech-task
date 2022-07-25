@@ -1,0 +1,32 @@
+.form-record
+    display: flex
+    flex-direction: row
+    align-items: center
+    margin-top: 12px
+    
+    &__title
+        width: 150px
+        margin-right: 12px
+        color: #3B3B3B
+        font-size: 14px
+        line-height: 22px
+        font-family: 'Noto Sans', sans-serif
+        font-weight: 300
+        cursor: default!important
+    &__text
+        color: #3B3B3B
+        font-size: 14px
+        line-height: 22px
+        font-family: 'Noto Sans', sans-serif
+        font-weight: 400
+        background: none
+        border: none
+        width: 100%
+        transition: all .2s ease-in-out
+        cursor: default
+        &.is_link
+            text-decoration: none!important
+            cursor: pointer
+            color: #82B284
+            &:hover
+                color: #98C88C

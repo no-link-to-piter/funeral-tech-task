@@ -1,0 +1,57 @@
+.company-images
+    margin-top: 32px
+    display: flex
+    flex-direction: column
+    &__title
+        font-weight: 300
+        font-size: 16px
+        line-height: 20px
+        font-family: 'Noto Sans', sans-serif
+        color: #3B3B3B
+        margin-bottom: 20px
+        text-transform: uppercase
+    &__list
+        display: flex
+        flex-direction: row
+        align-items: center
+        flex-wrap: wrap
+    &__button
+        border: 1px solid #E5E5E5
+        transition: all .2s ease-in-out
+        border-radius: 2px
+        position: relative
+        display: flex
+        justify-content: center
+        align-items: center
+        color: #82B284
+        font-size: 14px
+        line-height: 160%
+        font-weight: 600
+        font-family: 'Noto Sans', sans-serif
+        text-transform: uppercase
+        background: none
+        width: 400px
+        height: 40px
+
+        .plus-icon
+            position: absolute
+            top: 50%
+            left: 12px
+            transform: translateY(-50%)
+            width: 16px
+            height: 16px
+            path
+                fill: #82B284
+                transition: all .2s ease-in-out
+        &:hover
+            border: 1px solid #CDCDCD
+            color: #98C88C
+            .plus-icon
+                path
+                    fill: #98C88C
+        &:active
+            border: 1px solid #CDCDCD
+            color: #58A742
+            .plus-icon
+                path
+                    fill: #58A742
