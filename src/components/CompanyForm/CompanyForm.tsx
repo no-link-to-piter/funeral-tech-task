@@ -37,7 +37,6 @@ const CompanyForm = () => {
     }
 
     const getContractText = (no: string, issueDate: string) => {
-        console.log(issueDate)
         if (issueDate && no) return `${no} от ${formatDate(issueDate)}`;
         return no || formatDate(issueDate)
     }
